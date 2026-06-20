@@ -1,0 +1,32 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+
+    resolver 127.0.0.11 1.1.1.1 valid=300s ipv6=off;
+
+    # Proxy de feedback -> bot Vigil. El secreto (X-API-Key) se inyecta aquí,
+    # server-side, vía la env FEEDBACK_SECRET (envsubst al arrancar nginx):
+    # la app NO lleva credenciales. X-Project fija la cola de tickets (CR-XXXX).
+    location = /api/feedback {
+        if ($request_method = OPTIONS) {
+            add_header Access-Control-Allow-Origin "*";
+            add_header Access-Control-Allow-Methods "POST, OPTIONS";
+            add_header Access-Control-Allow-Headers "Content-Type";
+            add_header Content-Length 0;
+            return 204;
+        }
+        set $vigil_host vigilbot.app;
+        proxy_pass https://$vigil_host$request_uri;
+        proxy_ssl_server_name on;
+        proxy_set_header Host $vigil_host;
+        proxy_set_header X-API-Key "${FEEDBACK_SECRET}";
+        proxy_set_header X-Project "crinly";
+    }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
