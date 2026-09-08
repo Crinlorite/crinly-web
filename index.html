@@ -1,51 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Crinly — Cliente nativo de Navidrome y Subsonic</title>
-  <meta name="description" content="Crinly: reproductor de música nativo para tu servidor Navidrome o compatible con Subsonic. Ya en el App Store para iPhone, iPad, Mac, Apple TV y Apple Vision Pro.">
-  <meta name="theme-color" content="#0B1220">
-  <link rel="icon" href="/favicon.png">
+  <meta name="description" content="Crinly es el cliente nativo de Navidrome y Subsonic para iPhone, iPad, Mac, Apple TV, Apple Watch y Apple Vision Pro. Se conecta a tu propio servidor: no aloja ni distribuye contenido. Gratis, sin anuncios.">
+  <link rel="canonical" href="https://crinly.crintech.pro/">
   <meta property="og:title" content="Crinly — Cliente nativo de Navidrome y Subsonic">
-  <meta property="og:description" content="Ya disponible en el App Store para iPhone, iPad, Mac, Apple TV y Apple Vision Pro. Reproductor nativo para tu servidor Navidrome o Subsonic.">
+  <meta property="og:description" content="El cliente nativo para tu propio servidor Navidrome o compatible con Subsonic. En todo el ecosistema Apple, también sin conexión.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://crinly.crintech.pro/">
-  <link rel="stylesheet" href="/style.css?v=2">
+  <link rel="icon" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="/img/crinly-icon-160.png" alt="" class="nav-logo-img">
+        <span class="nav-logo-word">Crinly</span>
+      </a>
+      <div class="nav-center">
+        <a href="#que-es" class="nav-link">Qué es</a>
+        <a href="#funciones" class="nav-link">Funciones</a>
+        <a href="#compatible" class="nav-link">Compatibilidad</a>
+        <a href="#dispositivos" class="nav-link">Dispositivos</a>
+        <a href="#beta-android" class="nav-link">Android</a>
+        <a href="#crintech" class="nav-link">Desarrollador</a>
+      </div>
+      <div class="nav-right">
+        <a href="#descargar" class="nav-cta">Descargar</a>
+        <button class="nav-hamburger" aria-label="Menú" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </nav>
+
   <main>
-    <section class="hero">
-      <div class="mark" aria-label="Crinly">
-        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M 349 334 A 121 121 0 1 1 349 178" fill="none" stroke="#FFFFFF" stroke-width="62" stroke-linecap="round"/>
-        </svg>
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 349 334 A 121 121 0 1 1 349 178" fill="none" stroke="#FFFFFF" stroke-width="62" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h1>Crinly</h1>
+        <p class="tagline">Cliente nativo de Navidrome y Subsonic</p>
+        <p class="lead">Reproductor nativo para <strong>tu propio servidor</strong> Navidrome o compatible con Subsonic. Sin anuncios, sin seguimiento, sin cuentas. <strong>Crinly no aloja ni distribuye contenido</strong>: se conecta al servidor que ya tienes y reproduce tu propia biblioteca.</p>
+
+        <div id="descargar" class="cta store-badges">
+          <a href="https://apps.apple.com/es/app/crinly/id6782419608" target="_blank" rel="noopener" aria-label="Consíguelo en el App Store">
+            <img src="/img/appstore-badge.svg" alt="Consíguelo en el App Store" class="store-badge badge-apple">
+          </a>
+          <a href="https://apps.apple.com/es/app/crinly/id6782419608?platform=mac" target="_blank" rel="noopener" aria-label="Consíguelo en el Mac App Store">
+            <img src="/img/macappstore-badge.svg" alt="Consíguelo en el Mac App Store" class="store-badge badge-mac">
+          </a>
+        </div>
+        <p class="cta-android"><a class="btn-android" href="#beta-android">Android: en prueba cerrada — cómo entrar</a></p>
+        <p class="devices">Nativo en iPhone · iPad · Mac · Apple&nbsp;TV · Apple&nbsp;Watch · Apple&nbsp;Vision&nbsp;Pro</p>
       </div>
-      <h1>Crinly</h1>
-      <p class="tagline">Cliente nativo de Navidrome y Subsonic</p>
-      <p class="lead">Reproductor nativo para <strong>tu propio servidor</strong> <strong>Navidrome</strong> o compatible con <strong>Subsonic</strong>. Sin anuncios, sin seguimiento, sin cuentas. <strong>Crinly no aloja ni distribuye contenido</strong>: se conecta al servidor que ya tienes y reproduce tu propia biblioteca.</p>
-      <div class="cta store-badges">
-        <a href="https://apps.apple.com/es/app/crinly/id6782419608" target="_blank" rel="noopener" aria-label="Consíguelo en el App Store">
-          <img src="/img/appstore-badge.svg" alt="Consíguelo en el App Store" class="store-badge badge-apple">
-        </a>
-        <a href="https://apps.apple.com/es/app/crinly/id6782419608?platform=mac" target="_blank" rel="noopener" aria-label="Consíguelo en el Mac App Store">
-          <img src="/img/macappstore-badge.svg" alt="Consíguelo en el Mac App Store" class="store-badge badge-mac">
-        </a>
+    </section>
+
+    <section id="que-es" class="section">
+      <div class="section-inner">
+        <span class="section-tag">Qué es</span>
+        <h2>El cliente que le faltaba a tu servidor</h2>
+        <p class="section-lead">Montar Navidrome en casa es la parte fácil. La difícil era escucharlo bien desde el iPhone, el Mac o el reloj sin renunciar a una app que se sienta de Apple. Crinly es eso: una aplicación nativa en cada sistema, hablando con el servidor que ya tienes.</p>
+        <p class="section-lead">No hay catálogo, ni suscripción, ni cuenta que crear. Tus credenciales se guardan cifradas solo en tu dispositivo y la app no habla con nadie más que con tu servidor.</p>
       </div>
-      <p class="cta-android">
-        <a class="btn-android" href="#beta-android">Android: en prueba cerrada &mdash; cómo entrar</a>
-      </p>
-      <p class="devices">Nativo en iPhone · iPad · Mac · Apple&nbsp;TV · Apple&nbsp;Vision&nbsp;Pro</p>
-      <section class="beta" id="beta-android">
-        <h2>Beta de Android, en tres pasos</h2>
-        <p class="beta-lead">Crinly para Android está en <strong>prueba cerrada</strong>. El acceso va por el grupo de Google de Crintech Studios: entra con <strong>la misma cuenta de Google que usas en el móvil</strong> y ya podrás instalarla desde Play.</p>
+    </section>
+
+    <section id="funciones" class="section section-alt">
+      <div class="section-inner">
+        <span class="section-tag">Funciones</span>
+        <h2>Lo que trae</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Tu biblioteca entera</h3>
+            <p>Álbumes, artistas, listas de reproducción y favoritos, con sus carátulas y en el orden que tienen en el servidor.</p>
+          </article>
+          <article class="card">
+            <h3>También sin conexión</h3>
+            <p>Guarda una copia local de álbumes y listas para el avión, el metro o donde tu servidor no llegue. La biblioteca sigue navegable sin red.</p>
+          </article>
+          <article class="card">
+            <h3>Apple Watch</h3>
+            <p>Con sus propias descargas y selector de salida para AirPods: música en la muñeca sin llevar el teléfono.</p>
+          </article>
+          <article class="card">
+            <h3>Calidad original o MP3</h3>
+            <p>FLAC tal cual sale del servidor cuando quieres fidelidad, o MP3 cuando toca cuidar los datos móviles.</p>
+          </article>
+          <article class="card">
+            <h3>Donde esperas encontrarlo</h3>
+            <p>Pantalla de bloqueo, centro de control, AirPlay y los mandos del coche. Cola, aleatorio y repetición.</p>
+          </article>
+          <article class="card">
+            <h3>En 18 idiomas</h3>
+            <p>La app habla castellano, inglés, euskera, gallego, catalán, francés, alemán, italiano, portugués, ruso, japonés, chino, árabe, hindi, coreano, turco, indonesio y polaco.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="compatible" class="section">
+      <div class="section-inner">
+        <span class="section-tag">Compatibilidad</span>
+        <h2>Funciona con tu servidor</h2>
+        <p class="section-lead">Crinly habla la API de Subsonic, así que sirve para cualquier servidor que la implemente. Estos son los más habituales:</p>
+        <ul class="chips">
+          <li>Navidrome</li>
+          <li>OpenSubsonic</li>
+          <li>Airsonic</li>
+          <li>Airsonic&nbsp;Advanced</li>
+          <li>Gonic</li>
+          <li>Funkwhale</li>
+          <li>LMS</li>
+          <li>Subsonic</li>
+        </ul>
+        <p class="section-note">Necesitas tu propio servidor: Crinly no incluye, aloja ni distribuye música.</p>
+      </div>
+    </section>
+
+    <section id="dispositivos" class="section section-alt">
+      <div class="section-inner">
+        <span class="section-tag">Dispositivos</span>
+        <h2>Una app nativa en cada pantalla</h2>
+        <p class="section-lead">El mismo núcleo compartido, con interfaz propia de cada sistema — no una web envuelta.</p>
+        <div class="devgrid">
+          <div class="dev"><span>iPhone</span><small>y iPad</small></div>
+          <div class="dev"><span>Mac</span><small>App nativa</small></div>
+          <div class="dev"><span>Apple TV</span><small>En el salón</small></div>
+          <div class="dev"><span>Apple Watch</span><small>Con descargas propias</small></div>
+          <div class="dev"><span>Vision Pro</span><small>Nativa</small></div>
+          <div class="dev"><span>Android</span><small>En prueba cerrada</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beta-android" class="section">
+      <div class="section-inner">
+        <span class="section-tag">Android</span>
+        <h2>Entrar en la beta, en tres pasos</h2>
+        <p class="section-lead">Crinly para Android está en prueba cerrada. El acceso va por el grupo de Google de Crintech Studios: entra con <strong>la misma cuenta de Google que usas en el móvil</strong> y ya podrás instalarla desde Play.</p>
         <ol class="beta-steps">
           <li>
             <span class="beta-num">1</span>
             <div>
               <h3>Únete al grupo</h3>
               <p>Con la cuenta de Google de tu móvil Android.</p>
-              <a class="beta-link" href="https://groups.google.com/g/crintechstudios/" target="_blank" rel="noopener">Entrar al grupo →</a>
+              <a class="beta-link" href="https://groups.google.com/g/crintechstudios/" target="_blank" rel="noopener">Entrar al grupo</a>
             </div>
           </li>
           <li>
@@ -53,8 +160,8 @@
             <div>
               <h3>Acepta la invitación</h3>
               <p>Desde el navegador si estás en el ordenador, o directamente en el móvil.</p>
-              <a class="beta-link" href="https://play.google.com/apps/testing/com.crintechstudios.crinly" target="_blank" rel="noopener">Aceptar en la web →</a>
-              <a class="beta-link" href="https://play.google.com/store/apps/details?id=com.crintechstudios.crinly" target="_blank" rel="noopener">Abrir en Android →</a>
+              <a class="beta-link" href="https://play.google.com/apps/testing/com.crintechstudios.crinly" target="_blank" rel="noopener">Aceptar en la web</a>
+              <a class="beta-link" href="https://play.google.com/store/apps/details?id=com.crintechstudios.crinly" target="_blank" rel="noopener">Abrir en Android</a>
             </div>
           </li>
           <li>
@@ -65,14 +172,32 @@
             </div>
           </li>
         </ol>
-        <p class="beta-note">⚠️ La misma cuenta de Google en el grupo y en el móvil, o Play no te dejará entrar.</p>
-      </section>
-      <p class="links">
-        <a href="/privacy/">Política de privacidad</a>
-        <a href="mailto:info@crintech.pro?subject=Crinly">Contacto</a>
-      </p>
+        <p class="section-note">La misma cuenta de Google en el grupo y en el móvil, o Play no te dejará entrar.</p>
+      </div>
+    </section>
+
+    <section id="crintech" class="section section-alt">
+      <div class="section-inner">
+        <span class="section-tag">Desarrollador</span>
+        <h2>Hecha en Crintech Studios</h2>
+        <p class="section-lead">Un estudio pequeño de Navarra. Crinly nació de un problema propio: había servidor de música en casa, pero ninguna app nativa que lo tratara bien en todos los aparatos.</p>
+        <p class="section-lead"><a class="inline-link" href="https://crintech.pro/blog/como-hice-crinly/">Cómo se construyó Crinly</a> — el proceso, en el blog del estudio.</p>
+        <p class="section-lead"><a class="inline-link" href="https://crintech.pro">Ver el resto de aplicaciones del estudio</a></p>
+      </div>
     </section>
   </main>
-  <footer>&copy; 2026 <a href="https://crintech.pro">Crintech Studios</a></footer>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="mailto:info@crintech.pro?subject=Crinly" class="footer-link">Contacto</a>
+        <a href="/privacy/" class="footer-link">Política de privacidad</a>
+        <a href="https://crintech.pro" class="footer-link">Crintech Studios</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year">2026</span> <a href="https://crintech.pro">Crintech Studios</a>. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
