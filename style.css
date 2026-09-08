@@ -73,3 +73,21 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 30px
 .beta-link { display: inline-block; font-size: 13.5px; font-weight: 600; margin-right: 14px; }
 .beta-note { font-size: 12.5px; color: var(--muted); margin: 18px 0 0; }
 @media (max-width: 560px) { .beta { padding: 20px 18px 18px; } .beta h2 { font-size: 19px; } }
+
+/* Insignias oficiales de Apple (mismas que Aulixa). El badge negro trae borde
+   claro, así que se lee bien sobre el fondo oscuro — verificado renderizándolo. */
+.store-badges { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.store-badge { width: auto; transition: transform .18s ease, filter .18s ease;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.45)); }
+.store-badge:hover { transform: translateY(-2px); filter: drop-shadow(0 10px 22px rgba(0,0,0,.6)); }
+.badge-apple { height: 50px; }
+.badge-mac { height: 50px; }
+/* Android va aparte y SIN insignia oficial: la app está en prueba cerrada, y el
+   badge «Disponible en Google Play» daría a entender que se puede instalar sin más. */
+.cta-android { margin-top: 16px; }
+.btn-android { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600;
+  color: var(--muted); border: 1px solid rgba(159,176,199,.3); border-radius: 12px; padding: 9px 16px;
+  text-decoration: none; transition: border-color .15s ease, color .15s ease; }
+.btn-android::before { content: "▶"; font-size: 11px; opacity: .8; }
+.btn-android:hover { color: #e8eef2; border-color: rgba(159,176,199,.55); text-decoration: none; }
+@media (max-width: 560px) { .badge-apple, .badge-mac { height: 44px; } }
